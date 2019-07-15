@@ -43,7 +43,6 @@ Tree *createTree(int arr[], int start, int end) {
 	if (start > end) return NULL;
 	int mid = (start + end+1) / 2;
 	Tree *newTree=(Tree*)malloc(sizeof(Tree));
-	printf("Array %d \/ Start : %d, End : %d\n",arr[mid],start,end);
 	newTree=insertTree(newTree,arr[mid]);
 	newTree->leftChild = createTree(arr, start, mid - 1);
 	newTree->rightChild = createTree(arr, mid + 1, end);
