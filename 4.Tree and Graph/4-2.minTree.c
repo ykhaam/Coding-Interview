@@ -1,7 +1,7 @@
 /*
-¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÈ ¹è¿­ÀÌ ÀÖ´Ù.
-¹è¿­ ¾È¿¡´Â Áßº¹µÇÁö ¾ÊÀº Á¤¼ö°ª¸¸ Á¸ÀçÇÑ´Ù.
-³ôÀÌ°¡ ÃÖ¼Ò°¡ µÇ´Â ÀÌÁø Å½»ö Æ®¸®¸¦ ¸¸µå´Â ¾Ë°í¸®Áò.
+ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ëœ ë°°ì—´ì´ ìˆë‹¤.
+ë°°ì—´ ì•ˆì—ëŠ” ì¤‘ë³µë˜ì§€ ì•Šì€ ì •ìˆ˜ê°’ë§Œ ì¡´ì¬í•œë‹¤.
+ë†’ì´ê°€ ìµœì†Œê°€ ë˜ëŠ” ì´ì§„ íƒìƒ‰ íŠ¸ë¦¬ë¥¼ ë§Œë“œëŠ” ì•Œê³ ë¦¬ì¦˜.
 */
 #define MAX 20
 #define ARR_LEN 10
@@ -25,7 +25,6 @@ int main() {
 }
 
 Tree *insertTree(Tree *tree,int x) {
-	printf("¿À³ª?\n");
 	Tree *newTree = (Tree*)malloc(sizeof(Tree));
 	if (tree == NULL) {
 		newTree->data = x;
@@ -35,7 +34,7 @@ Tree *insertTree(Tree *tree,int x) {
 	}
 	else if (x < tree->data) tree->leftChild = insertTree(tree->leftChild, x);
 	else if (x > tree->data) tree->rightChild = insertTree(tree->rightChild, x);
-	else printf("\n ÀÌ¹Ì °°ÀºÅ°°¡ ÀÖ½À´Ï´Ù! \n");
+	else printf("\n ì´ë¯¸ ê°™ì€í‚¤ê°€ ìˆìŠµë‹ˆë‹¤! \n");
 
 	return tree;
 }
